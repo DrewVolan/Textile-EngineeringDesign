@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Template));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginLabel = new System.Windows.Forms.Label();
-            this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -63,7 +60,7 @@
             // обновитьToolStripMenuItem
             // 
             this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
-            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.обновитьToolStripMenuItem.Text = "Обновить";
             // 
             // аккаунтToolStripMenuItem
@@ -91,33 +88,21 @@
             this.loginLabel.Text = "Вы вошли под логином ";
             this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // avatarPictureBox
-            // 
-            this.avatarPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.avatarPictureBox.Location = new System.Drawing.Point(772, 5);
-            this.avatarPictureBox.Name = "avatarPictureBox";
-            this.avatarPictureBox.Size = new System.Drawing.Size(16, 16);
-            this.avatarPictureBox.TabIndex = 2;
-            this.avatarPictureBox.TabStop = false;
-            // 
-            // StandartForm
+            // Template
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(127)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.avatarPictureBox);
             this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.menuStrip1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "StandartForm";
+            this.Name = "Template";
             this.Text = "StandartForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StandartForm_FormClosed);
             this.Load += new System.EventHandler(this.StandartForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,6 +116,5 @@
         private System.Windows.Forms.ToolStripMenuItem аккаунтToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выйтиToolStripMenuItem;
         private System.Windows.Forms.Label loginLabel;
-        private System.Windows.Forms.PictureBox avatarPictureBox;
     }
 }

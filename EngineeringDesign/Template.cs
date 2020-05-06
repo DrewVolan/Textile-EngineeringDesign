@@ -13,7 +13,8 @@ namespace EngineeringDesign
         public SqlConnection sqlConnection;
         public SqlDataReader sdr;
         public Bitmap MyImage;
-        string[] imgExtencions = { "png", "jpg", "gif" };
+        public string[] imgExtencions = { "png", "jpg", "gif" };
+        public bool readOnlyParameter = true;
         public Template()
         {
             InitializeComponent();
@@ -29,20 +30,6 @@ namespace EngineeringDesign
         private void StandartForm_Load(object sender, EventArgs e)
         {
             loginLabel.Text += $"{Login}.";
-            if (MyImage != null)
-            {
-                MyImage.Dispose();
-            }
-            foreach (string imgExtencion in imgExtencions)
-            {
-                if (System.IO.File.Exists(Environment.CurrentDirectory + $"\\img\\{Login}.{imgExtencion}"))
-                {
-                    MyImage = new Bitmap(Environment.CurrentDirectory + $"\\img\\{Login}.{imgExtencion}");
-                    avatarPictureBox.Image = MyImage;
-                    avatarPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                    break;
-                }
-            }
         }
 
         public void StandartForm_FormClosed(object sender, FormClosedEventArgs e)

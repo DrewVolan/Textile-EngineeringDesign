@@ -43,7 +43,6 @@
             this.labelTrim = new System.Windows.Forms.Label();
             this.labelCloth = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
-            this.loginLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,6 +79,7 @@
             this.cuttingGoodsComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.orderLabel = new System.Windows.Forms.Label();
+            this.loginLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -218,15 +218,6 @@
             this.addButton.Text = "Добавить";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // loginLabel
-            // 
-            this.loginLabel.AutoSize = true;
-            this.loginLabel.Location = new System.Drawing.Point(12, 27);
-            this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(127, 13);
-            this.loginLabel.TabIndex = 24;
-            this.loginLabel.Text = "Вы зашли под логином ";
             // 
             // menuStrip1
             // 
@@ -602,14 +593,24 @@
             this.orderLabel.TabIndex = 0;
             this.orderLabel.Text = "orderLabel";
             // 
+            // loginLabel
+            // 
+            this.loginLabel.BackColor = System.Drawing.Color.White;
+            this.loginLabel.Location = new System.Drawing.Point(221, 0);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(586, 22);
+            this.loginLabel.TabIndex = 27;
+            this.loginLabel.Text = "Вы вошли под логином ";
+            this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 497);
+            this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.loginLabel);
             this.Name = "ManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Экран менеджера";
@@ -651,7 +652,6 @@
         private System.Windows.Forms.Label labelTrim;
         private System.Windows.Forms.Label labelCloth;
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.Label loginLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem инструментыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
@@ -688,5 +688,6 @@
         private System.Windows.Forms.Button readyButton;
         private System.Windows.Forms.Button cuttingGoodButton;
         private System.Windows.Forms.ListBox cuttingGoodsList;
+        private System.Windows.Forms.Label loginLabel;
     }
 }

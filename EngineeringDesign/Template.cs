@@ -20,18 +20,6 @@ namespace EngineeringDesign
             InitializeComponent();
         }
 
-        private void ВыйтиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AuthorizationForm authorizationForm = new AuthorizationForm();
-            authorizationForm.Show();
-            this.Hide();
-        }
-
-        private void StandartForm_Load(object sender, EventArgs e)
-        {
-            loginLabel.Text += $"{Login}.";
-        }
-
         public void StandartForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

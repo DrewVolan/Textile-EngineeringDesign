@@ -33,6 +33,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.idLabel = new System.Windows.Forms.Label();
+            this.userTypeTabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.usersListBox = new System.Windows.Forms.ListBox();
             this.medicToolStrip = new System.Windows.Forms.ToolStrip();
             this.writeButton = new System.Windows.Forms.ToolStripButton();
             this.updateButton = new System.Windows.Forms.ToolStripButton();
@@ -51,14 +54,18 @@
             this.typePostComboBox = new System.Windows.Forms.ComboBox();
             this.typePostLabel = new System.Windows.Forms.Label();
             this.loginLabel = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.usersListBox = new System.Windows.Forms.ListBox();
-            this.userTypeTabControl = new System.Windows.Forms.TabControl();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.userTypeTabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.medicToolStrip.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.userTypeTabControl.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // newEmployeeButton
@@ -113,6 +120,36 @@
             this.idLabel.TabIndex = 9;
             this.idLabel.Text = "ID:";
             // 
+            // userTypeTabControl
+            // 
+            this.userTypeTabControl.Controls.Add(this.tabPage1);
+            this.userTypeTabControl.Location = new System.Drawing.Point(3, 3);
+            this.userTypeTabControl.Name = "userTypeTabControl";
+            this.userTypeTabControl.SelectedIndex = 0;
+            this.userTypeTabControl.Size = new System.Drawing.Size(372, 348);
+            this.userTypeTabControl.TabIndex = 6;
+            this.userTypeTabControl.SelectedIndexChanged += new System.EventHandler(this.UserTypeTabControl_SelectedIndexChanged);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.usersListBox);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(364, 322);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Пользователи системы";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // usersListBox
+            // 
+            this.usersListBox.FormattingEnabled = true;
+            this.usersListBox.Location = new System.Drawing.Point(6, 6);
+            this.usersListBox.Name = "usersListBox";
+            this.usersListBox.Size = new System.Drawing.Size(352, 303);
+            this.usersListBox.TabIndex = 5;
+            this.usersListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UsersListBox_MouseClick);
+            // 
             // medicToolStrip
             // 
             this.medicToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -163,20 +200,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(301, 354);
             this.panel2.TabIndex = 11;
-            this.panel2.Controls.SetChildIndex(this.newEmployeeButton, 0);
-            this.panel2.Controls.SetChildIndex(this.typePostLabel, 0);
-            this.panel2.Controls.SetChildIndex(this.typePostComboBox, 0);
-            this.panel2.Controls.SetChildIndex(this.fullNameLabel, 0);
-            this.panel2.Controls.SetChildIndex(this.fullNameTextBox, 0);
-            this.panel2.Controls.SetChildIndex(this.dateLabel, 0);
-            this.panel2.Controls.SetChildIndex(this.dateTimePicker, 0);
-            this.panel2.Controls.SetChildIndex(this.loginTextBox, 0);
-            this.panel2.Controls.SetChildIndex(this.passwordLabel, 0);
-            this.panel2.Controls.SetChildIndex(this.passwordTextBox, 0);
-            this.panel2.Controls.SetChildIndex(this.paramLabel1, 0);
-            this.panel2.Controls.SetChildIndex(this.paramTextBox1, 0);
-            this.panel2.Controls.SetChildIndex(this.paramLabel2, 0);
-            this.panel2.Controls.SetChildIndex(this.paramTextBox2, 0);
             // 
             // paramTextBox2
             // 
@@ -310,58 +333,79 @@
             this.loginLabel.Text = "Логин:";
             this.loginLabel.Visible = false;
             // 
-            // tabPage1
+            // menuStrip2
             // 
-            this.tabPage1.Controls.Add(this.usersListBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(364, 322);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Пользователи системы";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(221)))), ((int)(((byte)(215)))));
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.инструментыToolStripMenuItem,
+            this.аккаунтToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip2.TabIndex = 12;
+            this.menuStrip2.Text = "menuStrip2";
             // 
-            // usersListBox
+            // инструментыToolStripMenuItem
             // 
-            this.usersListBox.FormattingEnabled = true;
-            this.usersListBox.Location = new System.Drawing.Point(6, 6);
-            this.usersListBox.Name = "usersListBox";
-            this.usersListBox.Size = new System.Drawing.Size(352, 303);
-            this.usersListBox.TabIndex = 5;
-            this.usersListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UsersListBox_MouseClick);
+            this.инструментыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.обновитьToolStripMenuItem});
+            this.инструментыToolStripMenuItem.Name = "инструментыToolStripMenuItem";
+            this.инструментыToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.инструментыToolStripMenuItem.Text = "Инструменты";
             // 
-            // userTypeTabControl
+            // обновитьToolStripMenuItem
             // 
-            this.userTypeTabControl.Controls.Add(this.tabPage1);
-            this.userTypeTabControl.Location = new System.Drawing.Point(3, 3);
-            this.userTypeTabControl.Name = "userTypeTabControl";
-            this.userTypeTabControl.SelectedIndex = 0;
-            this.userTypeTabControl.Size = new System.Drawing.Size(372, 348);
-            this.userTypeTabControl.TabIndex = 6;
-            this.userTypeTabControl.SelectedIndexChanged += new System.EventHandler(this.UserTypeTabControl_SelectedIndexChanged);
+            this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.обновитьToolStripMenuItem.Text = "Обновить";
+            // 
+            // аккаунтToolStripMenuItem
+            // 
+            this.аккаунтToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.выйтиToolStripMenuItem});
+            this.аккаунтToolStripMenuItem.Name = "аккаунтToolStripMenuItem";
+            this.аккаунтToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.аккаунтToolStripMenuItem.Text = "Аккаунт";
+            // 
+            // выйтиToolStripMenuItem
+            // 
+            this.выйтиToolStripMenuItem.Name = "выйтиToolStripMenuItem";
+            this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.выйтиToolStripMenuItem.Text = "Выйти";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(159, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(586, 22);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Вы вошли под логином ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // AdministratorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.medicToolStrip);
+            this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AdministratorForm";
             this.Text = "Медпункт (Администрирование)";
             this.Load += new System.EventHandler(this.AdministrationForm_Load);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.panel2, 0);
-            this.Controls.SetChildIndex(this.medicToolStrip, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.userTypeTabControl.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.medicToolStrip.ResumeLayout(false);
             this.medicToolStrip.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.userTypeTabControl.ResumeLayout(false);
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,5 +439,11 @@
         private System.Windows.Forms.TabControl userTypeTabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ListBox usersListBox;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem инструментыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem аккаунтToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выйтиToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }

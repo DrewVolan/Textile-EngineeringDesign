@@ -64,38 +64,38 @@ namespace EngineeringDesign
                                     regC.Show();
                                     this.Hide();
                                     break;
-                                /*case "Менеджер по работе с клиентами":
-                                    CsMForm regCsM = new CsMForm();
-                                    regCsM.Login = textBox1.Text;
-                                    regCsM.Left = this.Left;
-                                    regCsM.Top = this.Top;
-                                    regCsM.Show();
+                                case "Менеджер":
+                                    ManagerForm managerForm = new ManagerForm();
+                                    managerForm.Login = textBox1.Text;
+                                    managerForm.Left = this.Left;
+                                    managerForm.Top = this.Top;
+                                    managerForm.Show();
                                     this.Hide();
                                     break;
-                                case "Менеджер по закупкам":
-                                    PmForm regPm = new PmForm();
-                                    regPm.Login = textBox1.Text;
-                                    regPm.Left = this.Left;
-                                    regPm.Top = this.Top;
-                                    regPm.Show();
+                                case "Кладовщик":
+                                    StorekeeperForm storekeeperForm = new StorekeeperForm();
+                                    storekeeperForm.Login = textBox1.Text;
+                                    storekeeperForm.Left = this.Left;
+                                    storekeeperForm.Top = this.Top;
+                                    storekeeperForm.Show();
                                     this.Hide();
                                     break;
-                                case "Мастер":
-                                    MasterForm regM = new MasterForm();
-                                    regM.Login = textBox1.Text;
-                                    regM.Left = this.Left;
-                                    regM.Top = this.Top;
-                                    regM.Show();
+                                case "Администратор":
+                                    AdministratorForm administratorForm = new AdministratorForm();
+                                    administratorForm.Login = textBox1.Text;
+                                    administratorForm.Left = this.Left;
+                                    administratorForm.Top = this.Top;
+                                    administratorForm.Show();
                                     this.Hide();
                                     break;
                                 case "Директор":
-                                    DirectorForm regD = new DirectorForm();
-                                    regD.Login = textBox1.Text;
-                                    regD.Left = this.Left;
-                                    regD.Top = this.Top;
-                                    regD.Show();
+                                    DirectorForm directorForm = new DirectorForm();
+                                    directorForm.Login = textBox1.Text;
+                                    directorForm.Left = this.Left;
+                                    directorForm.Top = this.Top;
+                                    directorForm.Show();
                                     this.Hide();
-                                    break;*/
+                                    break;
                             }
                         }
                         else

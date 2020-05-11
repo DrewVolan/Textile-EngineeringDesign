@@ -54,6 +54,12 @@
             this.toGanttChartButton = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.workshopPictureBox)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -360,11 +367,63 @@
             this.panel2.Size = new System.Drawing.Size(756, 376);
             this.panel2.TabIndex = 0;
             // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(221)))), ((int)(((byte)(215)))));
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.инструментыToolStripMenuItem,
+            this.аккаунтToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip2.TabIndex = 4;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // инструментыToolStripMenuItem
+            // 
+            this.инструментыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.обновитьToolStripMenuItem});
+            this.инструментыToolStripMenuItem.Name = "инструментыToolStripMenuItem";
+            this.инструментыToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.инструментыToolStripMenuItem.Text = "Инструменты";
+            // 
+            // обновитьToolStripMenuItem
+            // 
+            this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.обновитьToolStripMenuItem.Text = "Обновить";
+            // 
+            // аккаунтToolStripMenuItem
+            // 
+            this.аккаунтToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.выйтиToolStripMenuItem});
+            this.аккаунтToolStripMenuItem.Name = "аккаунтToolStripMenuItem";
+            this.аккаунтToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.аккаунтToolStripMenuItem.Text = "Аккаунт";
+            // 
+            // выйтиToolStripMenuItem
+            // 
+            this.выйтиToolStripMenuItem.Name = "выйтиToolStripMenuItem";
+            this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.выйтиToolStripMenuItem.Text = "Выйти";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(202, 2);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(586, 22);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Вы вошли под логином ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // DirectorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DirectorForm";
@@ -382,7 +441,10 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -414,5 +476,11 @@
         private System.Windows.Forms.ComboBox firstTaskHourСomboBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem инструментыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem аккаунтToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выйтиToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
     }
 }

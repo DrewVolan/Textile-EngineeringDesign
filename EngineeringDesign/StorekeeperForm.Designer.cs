@@ -36,25 +36,25 @@
             this.clothesNameLabel = new System.Windows.Forms.Label();
             this.clothesList = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.furniturePictureBox = new System.Windows.Forms.PictureBox();
+            this.linkTextBox = new System.Windows.Forms.TextBox();
+            this.addPictureButton = new System.Windows.Forms.Button();
             this.deleteFurniture = new System.Windows.Forms.Button();
             this.addFurniture = new System.Windows.Forms.Button();
             this.furnitureName = new System.Windows.Forms.TextBox();
             this.furnitureNameLabel = new System.Windows.Forms.Label();
             this.furnituresList = new System.Windows.Forms.ListBox();
-            this.loginLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addPictureButton = new System.Windows.Forms.Button();
-            this.linkTextBox = new System.Windows.Forms.TextBox();
-            this.furniturePictureBox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.furniturePictureBox)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -144,6 +144,32 @@
             this.tabPage2.Text = "Список фурнитуры";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // furniturePictureBox
+            // 
+            this.furniturePictureBox.Location = new System.Drawing.Point(318, 343);
+            this.furniturePictureBox.Name = "furniturePictureBox";
+            this.furniturePictureBox.Size = new System.Drawing.Size(100, 50);
+            this.furniturePictureBox.TabIndex = 11;
+            this.furniturePictureBox.TabStop = false;
+            // 
+            // linkTextBox
+            // 
+            this.linkTextBox.Location = new System.Drawing.Point(318, 297);
+            this.linkTextBox.Name = "linkTextBox";
+            this.linkTextBox.ReadOnly = true;
+            this.linkTextBox.Size = new System.Drawing.Size(442, 20);
+            this.linkTextBox.TabIndex = 10;
+            // 
+            // addPictureButton
+            // 
+            this.addPictureButton.Location = new System.Drawing.Point(176, 295);
+            this.addPictureButton.Name = "addPictureButton";
+            this.addPictureButton.Size = new System.Drawing.Size(136, 23);
+            this.addPictureButton.TabIndex = 9;
+            this.addPictureButton.Text = "Добавить изображение";
+            this.addPictureButton.UseVisualStyleBackColor = true;
+            this.addPictureButton.Click += new System.EventHandler(this.AddPictureButton_Click);
+            // 
             // deleteFurniture
             // 
             this.deleteFurniture.Location = new System.Drawing.Point(176, 370);
@@ -189,15 +215,6 @@
             this.furnituresList.TabIndex = 1;
             this.furnituresList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FurnituresList_MouseClick);
             // 
-            // loginLabel
-            // 
-            this.loginLabel.AutoSize = true;
-            this.loginLabel.Location = new System.Drawing.Point(542, 48);
-            this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(127, 13);
-            this.loginLabel.TabIndex = 5;
-            this.loginLabel.Text = "Вы зашли под логином ";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -239,39 +256,23 @@
             this.выйтиToolStripMenuItem.Text = "Выйти";
             this.выйтиToolStripMenuItem.Click += new System.EventHandler(this.ВыйтиToolStripMenuItem_Click);
             // 
-            // addPictureButton
+            // label1
             // 
-            this.addPictureButton.Location = new System.Drawing.Point(176, 295);
-            this.addPictureButton.Name = "addPictureButton";
-            this.addPictureButton.Size = new System.Drawing.Size(136, 23);
-            this.addPictureButton.TabIndex = 9;
-            this.addPictureButton.Text = "Добавить изображение";
-            this.addPictureButton.UseVisualStyleBackColor = true;
-            this.addPictureButton.Click += new System.EventHandler(this.AddPictureButton_Click);
-            // 
-            // linkTextBox
-            // 
-            this.linkTextBox.Location = new System.Drawing.Point(318, 297);
-            this.linkTextBox.Name = "linkTextBox";
-            this.linkTextBox.ReadOnly = true;
-            this.linkTextBox.Size = new System.Drawing.Size(442, 20);
-            this.linkTextBox.TabIndex = 10;
-            // 
-            // furniturePictureBox
-            // 
-            this.furniturePictureBox.Location = new System.Drawing.Point(318, 343);
-            this.furniturePictureBox.Name = "furniturePictureBox";
-            this.furniturePictureBox.Size = new System.Drawing.Size(100, 50);
-            this.furniturePictureBox.TabIndex = 11;
-            this.furniturePictureBox.TabStop = false;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(202, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(586, 22);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Вы вошли под логином ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // StorekeeperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 482);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.tabControl1);
             this.Name = "StorekeeperForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -283,9 +284,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.furniturePictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.furniturePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,7 +307,6 @@
         private System.Windows.Forms.Button addFurniture;
         private System.Windows.Forms.TextBox furnitureName;
         private System.Windows.Forms.Label furnitureNameLabel;
-        private System.Windows.Forms.Label loginLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem инструментыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
@@ -315,5 +315,6 @@
         private System.Windows.Forms.TextBox linkTextBox;
         private System.Windows.Forms.Button addPictureButton;
         private System.Windows.Forms.PictureBox furniturePictureBox;
+        private System.Windows.Forms.Label label1;
     }
 }

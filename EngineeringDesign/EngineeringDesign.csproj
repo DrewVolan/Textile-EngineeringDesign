@@ -115,8 +115,14 @@
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DirectorForm.resx">
       <DependentUpon>DirectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,6 +133,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StorekeeperForm.resx">
+      <DependentUpon>StorekeeperForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template.resx">
       <DependentUpon>Template.cs</DependentUpon>
     </EmbeddedResource>

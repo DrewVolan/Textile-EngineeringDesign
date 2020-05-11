@@ -66,15 +66,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.goodSchemePictureBox = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.deleteMyGoodButton = new System.Windows.Forms.Button();
             this.myGoodPictureBox = new System.Windows.Forms.PictureBox();
             this.myGoodsListBox = new System.Windows.Forms.ListBox();
             this.loginLabel = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteMyGoodButton = new System.Windows.Forms.Button();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -84,7 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.goodSchemePictureBox)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myGoodPictureBox)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -478,6 +483,16 @@
             this.tabPage4.Text = "Мои изделия";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // deleteMyGoodButton
+            // 
+            this.deleteMyGoodButton.Location = new System.Drawing.Point(795, 409);
+            this.deleteMyGoodButton.Name = "deleteMyGoodButton";
+            this.deleteMyGoodButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteMyGoodButton.TabIndex = 2;
+            this.deleteMyGoodButton.Text = "Удалить";
+            this.deleteMyGoodButton.UseVisualStyleBackColor = true;
+            this.deleteMyGoodButton.Click += new System.EventHandler(this.DeleteMyGoodButton_Click);
+            // 
             // myGoodPictureBox
             // 
             this.myGoodPictureBox.BackColor = System.Drawing.Color.Gray;
@@ -504,17 +519,6 @@
             this.loginLabel.Size = new System.Drawing.Size(127, 13);
             this.loginLabel.TabIndex = 1;
             this.loginLabel.Text = "Вы зашли под логином ";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.инструментыToolStripMenuItem,
-            this.аккаунтToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(906, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // инструментыToolStripMenuItem
             // 
@@ -546,23 +550,64 @@
             this.выйтиToolStripMenuItem.Text = "Выйти";
             this.выйтиToolStripMenuItem.Click += new System.EventHandler(this.ВыйтиToolStripMenuItem_Click);
             // 
-            // deleteMyGoodButton
+            // menuStrip2
             // 
-            this.deleteMyGoodButton.Location = new System.Drawing.Point(795, 409);
-            this.deleteMyGoodButton.Name = "deleteMyGoodButton";
-            this.deleteMyGoodButton.Size = new System.Drawing.Size(75, 23);
-            this.deleteMyGoodButton.TabIndex = 2;
-            this.deleteMyGoodButton.Text = "Удалить";
-            this.deleteMyGoodButton.UseVisualStyleBackColor = true;
-            this.deleteMyGoodButton.Click += new System.EventHandler(this.DeleteMyGoodButton_Click);
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(221)))), ((int)(((byte)(215)))));
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem3});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(906, 24);
+            this.menuStrip2.TabIndex = 3;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(95, 20);
+            this.toolStripMenuItem1.Text = "Инструменты";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(128, 22);
+            this.toolStripMenuItem2.Text = "Обновить";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem4});
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(63, 20);
+            this.toolStripMenuItem3.Text = "Аккаунт";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(109, 22);
+            this.toolStripMenuItem4.Text = "Выйти";
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(304, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(586, 22);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Вы вошли под логином ";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 500);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.loginLabel);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl1);
             this.Name = "CustomerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -580,8 +625,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.goodSchemePictureBox)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.myGoodPictureBox)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,7 +649,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button updateOrder;
         private System.Windows.Forms.TextBox orderNum;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem инструментыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem аккаунтToolStripMenuItem;
@@ -636,5 +680,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox myGoodPictureBox;
         private System.Windows.Forms.Button deleteMyGoodButton;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.Label label11;
     }
 }

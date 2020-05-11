@@ -157,7 +157,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(127)))));
             this.ClientSize = new System.Drawing.Size(624, 441);
             this.Controls.Add(this.wrongPasswordLogin);
             this.Controls.Add(this.wrongPasswordLetters);
@@ -170,7 +169,6 @@
             this.Controls.Add(this.loginTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.registerButton);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";

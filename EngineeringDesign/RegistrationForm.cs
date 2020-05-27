@@ -30,7 +30,7 @@ namespace EngineeringDesign
                 await sqlConnection.OpenAsync();
                 SqlDataReader sdr = null;
                 SqlCommand cmdSelect = new SqlCommand("SELECT * FROM [Users]", sqlConnection);
-                SqlCommand cmdInsert = new SqlCommand("INSERT INTO [Users] (Login, Password, Role)VALUES(@Login, @Password, @Role)", sqlConnection);
+                SqlCommand cmdInsert = new SqlCommand("INSERT INTO [Users] (Login, Pass, Role, Id)VALUES(@Login, @Password, @Role, 10)", sqlConnection);
                 cmdInsert.Parameters.AddWithValue("Login", loginTextBox.Text);
                 cmdInsert.Parameters.AddWithValue("Password", passwordTextBox.Text);
                 cmdInsert.Parameters.AddWithValue("Role", "Заказчик");

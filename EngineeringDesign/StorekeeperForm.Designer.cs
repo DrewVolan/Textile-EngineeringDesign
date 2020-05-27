@@ -49,7 +49,7 @@
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.loginLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -61,7 +61,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(13, 52);
+            this.tabControl1.Location = new System.Drawing.Point(508, 259);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(775, 425);
@@ -222,7 +222,7 @@
             this.аккаунтToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1295, 24);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -256,22 +256,22 @@
             this.выйтиToolStripMenuItem.Text = "Выйти";
             this.выйтиToolStripMenuItem.Click += new System.EventHandler(this.ВыйтиToolStripMenuItem_Click);
             // 
-            // label1
+            // loginLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(202, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(586, 22);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Вы вошли под логином ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.loginLabel.BackColor = System.Drawing.Color.White;
+            this.loginLabel.Location = new System.Drawing.Point(202, 0);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(586, 22);
+            this.loginLabel.TabIndex = 27;
+            this.loginLabel.Text = "Вы вошли под логином ";
+            this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // StorekeeperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 482);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1295, 696);
+            this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl1);
             this.Name = "StorekeeperForm";
@@ -315,6 +315,6 @@
         private System.Windows.Forms.TextBox linkTextBox;
         private System.Windows.Forms.Button addPictureButton;
         private System.Windows.Forms.PictureBox furniturePictureBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label loginLabel;
     }
 }

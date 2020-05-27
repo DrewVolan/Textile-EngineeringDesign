@@ -74,12 +74,12 @@
             this.cuttingClothComboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.smallPictureBox = new System.Windows.Forms.PictureBox();
-            this.bigPictureBox = new System.Windows.Forms.PictureBox();
             this.cuttingGoodsComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.orderLabel = new System.Windows.Forms.Label();
             this.loginLabel = new System.Windows.Forms.Label();
+            this.smallPictureBox = new System.Windows.Forms.PictureBox();
+            this.bigPictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -226,7 +226,7 @@
             this.аккаунтToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(817, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1292, 24);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -266,7 +266,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 43);
+            this.tabControl1.Location = new System.Drawing.Point(472, 237);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(799, 443);
@@ -545,26 +545,6 @@
             this.panel1.Size = new System.Drawing.Size(534, 329);
             this.panel1.TabIndex = 5;
             // 
-            // smallPictureBox
-            // 
-            this.smallPictureBox.BackColor = System.Drawing.Color.LightCoral;
-            this.smallPictureBox.Location = new System.Drawing.Point(309, 29);
-            this.smallPictureBox.Name = "smallPictureBox";
-            this.smallPictureBox.Size = new System.Drawing.Size(100, 50);
-            this.smallPictureBox.TabIndex = 1;
-            this.smallPictureBox.TabStop = false;
-            this.smallPictureBox.Visible = false;
-            // 
-            // bigPictureBox
-            // 
-            this.bigPictureBox.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bigPictureBox.Location = new System.Drawing.Point(32, 29);
-            this.bigPictureBox.Name = "bigPictureBox";
-            this.bigPictureBox.Size = new System.Drawing.Size(144, 73);
-            this.bigPictureBox.TabIndex = 0;
-            this.bigPictureBox.TabStop = false;
-            this.bigPictureBox.Visible = false;
-            // 
             // cuttingGoodsComboBox
             // 
             this.cuttingGoodsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -603,11 +583,31 @@
             this.loginLabel.Text = "Вы вошли под логином ";
             this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // smallPictureBox
+            // 
+            this.smallPictureBox.BackColor = System.Drawing.Color.LightCoral;
+            this.smallPictureBox.Location = new System.Drawing.Point(309, 29);
+            this.smallPictureBox.Name = "smallPictureBox";
+            this.smallPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.smallPictureBox.TabIndex = 1;
+            this.smallPictureBox.TabStop = false;
+            this.smallPictureBox.Visible = false;
+            // 
+            // bigPictureBox
+            // 
+            this.bigPictureBox.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bigPictureBox.Location = new System.Drawing.Point(32, 29);
+            this.bigPictureBox.Name = "bigPictureBox";
+            this.bigPictureBox.Size = new System.Drawing.Size(144, 73);
+            this.bigPictureBox.TabIndex = 0;
+            this.bigPictureBox.TabStop = false;
+            this.bigPictureBox.Visible = false;
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 497);
+            this.ClientSize = new System.Drawing.Size(1292, 692);
             this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);

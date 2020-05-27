@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.registerButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,8 +43,8 @@
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(240, 380);
-            this.registerButton.Name = "registrationButton";
+            this.registerButton.Location = new System.Drawing.Point(905, 697);
+            this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(121, 23);
             this.registerButton.TabIndex = 0;
             this.registerButton.Text = "Зарегистрироваться";
@@ -54,7 +53,7 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(240, 237);
+            this.passwordTextBox.Location = new System.Drawing.Point(905, 554);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '●';
             this.passwordTextBox.Size = new System.Drawing.Size(200, 20);
@@ -63,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(160, 240);
+            this.label2.Location = new System.Drawing.Point(825, 557);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 6;
@@ -71,7 +70,7 @@
             // 
             // loginTextBox
             // 
-            this.loginTextBox.Location = new System.Drawing.Point(240, 117);
+            this.loginTextBox.Location = new System.Drawing.Point(905, 434);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(200, 20);
             this.loginTextBox.TabIndex = 5;
@@ -79,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 120);
+            this.label1.Location = new System.Drawing.Point(825, 437);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 4;
@@ -87,7 +86,7 @@
             // 
             // lookPassButton
             // 
-            this.lookPassButton.Location = new System.Drawing.Point(477, 235);
+            this.lookPassButton.Location = new System.Drawing.Point(1142, 552);
             this.lookPassButton.Name = "lookPassButton";
             this.lookPassButton.Size = new System.Drawing.Size(114, 23);
             this.lookPassButton.TabIndex = 8;
@@ -100,7 +99,7 @@
             // 
             this.warningLabel.AutoSize = true;
             this.warningLabel.ForeColor = System.Drawing.Color.Red;
-            this.warningLabel.Location = new System.Drawing.Point(160, 275);
+            this.warningLabel.Location = new System.Drawing.Point(825, 592);
             this.warningLabel.Name = "warningLabel";
             this.warningLabel.Size = new System.Drawing.Size(0, 13);
             this.warningLabel.TabIndex = 9;
@@ -109,7 +108,7 @@
             // 
             this.wrongPasswordAnt.AutoSize = true;
             this.wrongPasswordAnt.ForeColor = System.Drawing.Color.Red;
-            this.wrongPasswordAnt.Location = new System.Drawing.Point(160, 275);
+            this.wrongPasswordAnt.Location = new System.Drawing.Point(825, 592);
             this.wrongPasswordAnt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.wrongPasswordAnt.Name = "wrongPasswordAnt";
             this.wrongPasswordAnt.Size = new System.Drawing.Size(319, 13);
@@ -121,7 +120,7 @@
             // 
             this.wrongPasswordLength.AutoSize = true;
             this.wrongPasswordLength.ForeColor = System.Drawing.Color.Red;
-            this.wrongPasswordLength.Location = new System.Drawing.Point(186, 302);
+            this.wrongPasswordLength.Location = new System.Drawing.Point(851, 619);
             this.wrongPasswordLength.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.wrongPasswordLength.Name = "wrongPasswordLength";
             this.wrongPasswordLength.Size = new System.Drawing.Size(221, 13);
@@ -133,7 +132,7 @@
             // 
             this.wrongPasswordLetters.AutoSize = true;
             this.wrongPasswordLetters.ForeColor = System.Drawing.Color.Red;
-            this.wrongPasswordLetters.Location = new System.Drawing.Point(186, 329);
+            this.wrongPasswordLetters.Location = new System.Drawing.Point(851, 646);
             this.wrongPasswordLetters.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.wrongPasswordLetters.Name = "wrongPasswordLetters";
             this.wrongPasswordLetters.Size = new System.Drawing.Size(268, 13);
@@ -145,7 +144,7 @@
             // 
             this.wrongPasswordLogin.AutoSize = true;
             this.wrongPasswordLogin.ForeColor = System.Drawing.Color.Red;
-            this.wrongPasswordLogin.Location = new System.Drawing.Point(186, 355);
+            this.wrongPasswordLogin.Location = new System.Drawing.Point(851, 672);
             this.wrongPasswordLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.wrongPasswordLogin.Name = "wrongPasswordLogin";
             this.wrongPasswordLogin.Size = new System.Drawing.Size(191, 13);
@@ -157,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 441);
+            this.ClientSize = new System.Drawing.Size(1289, 773);
             this.Controls.Add(this.wrongPasswordLogin);
             this.Controls.Add(this.wrongPasswordLetters);
             this.Controls.Add(this.wrongPasswordLength);

@@ -43,7 +43,7 @@ namespace EngineeringDesign
 
         private async void SaveButton_Click(object sender, EventArgs e)
         {
-            sqlConnection = new SqlConnection(connectionPathMain);
+            sqlConnection = new SqlConnection(connectionPathOptional);
             SqlCommand cmdUpdate = new SqlCommand("UPDATE [Workshops] SET [Plan]=@Plan WHERE [Name]=@Name", sqlConnection);
             workshopPictureBox.BringToFront();
             Bitmap bmp = new Bitmap(workshopPictureBox.Width, workshopPictureBox.Height);
@@ -85,7 +85,7 @@ namespace EngineeringDesign
         private async void RestartButton_Click(object sender, EventArgs e)
         {
             List<byte[]> iScreen = new List<byte[]>();
-            sqlConnection = new SqlConnection(connectionPathMain);
+            sqlConnection = new SqlConnection(connectionPathOptional);
             SqlCommand cmdSelect = new SqlCommand("SELECT [Empty_Plan] FROM [Workshops] WHERE [Name]=@Name", sqlConnection);
             SqlCommand cmdSelectPlan = new SqlCommand("SELECT [Plan] FROM [Workshops] WHERE [Name]=@Name", sqlConnection);
             SqlCommand cmdUpdate = new SqlCommand("UPDATE [Workshops] SET [Plan]=@Plan WHERE [Name]=@Name", sqlConnection);
@@ -127,7 +127,7 @@ namespace EngineeringDesign
         private async void WorkshopComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
             List<byte[]> iScreen = new List<byte[]>();
-            sqlConnection = new SqlConnection(connectionPathMain);
+            sqlConnection = new SqlConnection(connectionPathOptional);
             SqlCommand cmdSelect = new SqlCommand("SELECT [Plan] FROM [Workshops] WHERE [Name]=@Name", sqlConnection);
             cmdSelect.Parameters.AddWithValue("Name", workshopComboBox.Text);
             await sqlConnection.OpenAsync();
@@ -155,17 +155,7 @@ namespace EngineeringDesign
                 //MessageBox.Show("Work DB!");
             }*/
 
-            // TODO: This line of code loads data into the 'sweetDataBaseDataSet.Ingridients' table. You can move, or remove it, as needed.
-            //this.ingridientsTableAdapter.Fill(this.sweetDataBaseDataSet.Ingridients);
-            // TODO: This line of code loads data into the 'sweetDataBaseDataSet.Decoration' table. You can move, or remove it, as needed.
-            //this.decorationTableAdapter.Fill(this.sweetDataBaseDataSet.Decoration);
-            // TODO: This line of code loads data into the 'sweetDataBaseDataSet.typeOfEquipment' table. You can move, or remove it, as needed.
-            //this.typeOfEquipmentTableAdapter.Fill(this.sweetDataBaseDataSet.typeOfEquipment);
-            // TODO: This line of code loads data into the 'sweetDataBaseDataSet1.Ingridients' table. You can move, or remove it, as needed.
-            //this.ingridientsTableAdapter.Fill(this.sweetDataBaseDataSet.Ingridients);
-            // TODO: This line of code loads data into the 'sweetDataBaseDataSet.Equipment' table. You can move, or remove it, as needed.
-            //this.equipmentTableAdapter.Fill(this.sweetDataBaseDataSet.Equipment);
-
+            loginLabel.Text += $"{Login}.";
         }
 
         PictureBox[] pictureBox = new PictureBox[16];
@@ -324,6 +314,18 @@ namespace EngineeringDesign
             rowsArray[rowNum, 1] = qtyDaysTextBox.Text;
             rowsComboBox.Items.Add(rowsArray[rowNum, 0]);
             rowNum++;
+        }
+
+        private void ВыйтиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AuthorizationForm authorizationForm = new AuthorizationForm();
+            authorizationForm.Show();
+            this.Hide();
+        }
+
+        private void ОбновитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loginLabel.Text = "Вы вошли под логином ";
         }
 
         //Функция для сохранения фото в БД

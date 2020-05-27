@@ -15,8 +15,6 @@ namespace EngineeringDesign
     {
         bool deny = false;
         int qtyRoll = 0;
-
-
         public ManagerForm()
         {
             InitializeComponent();
@@ -200,8 +198,7 @@ namespace EngineeringDesign
             {
                 string id = (orderList.SelectedItem.ToString().Split(new char[] { ' ' }))[2];
                 string status = "";
-                string connectionPath = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Desktop\Учёба\3 курс\1 семестр\Сетевое программирование\Session\Session\Database.mdf;Integrated Security=True";
-                sqlConnection = new SqlConnection(connectionPath);
+                sqlConnection = new SqlConnection(connectionPathMain);
                 await sqlConnection.OpenAsync();
                 SqlDataReader sdr;
                 SqlCommand checkStatus = new SqlCommand("SELECT * FROM [Orders]", sqlConnection);

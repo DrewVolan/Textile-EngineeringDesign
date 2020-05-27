@@ -177,7 +177,7 @@ namespace EngineeringDesign
             orderList.SelectedIndex = -1;
             qtyBox.Text = "0";
             orderNum.Text = "";
-            loginLabel.Text = "Вы зашли под логином ";
+            loginLabel.Text = "Вы вошли под логином ";
             nameTextBox.Text = "";
             clothComboBox.Text = "";
             clothComboBox.Items.Clear();
@@ -722,6 +722,13 @@ namespace EngineeringDesign
                 sqlConnection.Close();
                 ОбновитьToolStripMenuItem_Click(this, e);
             }
+        }
+
+        private void ToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            AuthorizationForm authorizationForm = new AuthorizationForm();
+            authorizationForm.Show();
+            this.Hide();
         }
     }
 }

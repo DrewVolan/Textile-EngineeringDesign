@@ -52,7 +52,7 @@ namespace EngineeringDesign
                     if (textBox1.Text == Convert.ToString(sdr["Login"]))
                     {
                         checkLog = true;
-                        if (textBox2.Text == Convert.ToString(sdr["Password"]))
+                        if (textBox2.Text == Convert.ToString(sdr["Pass"]))
                         {
                             switch (Convert.ToString(sdr["Role"]))
                             {

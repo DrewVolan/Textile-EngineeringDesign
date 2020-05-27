@@ -57,7 +57,7 @@ namespace EngineeringDesign
                 if (sdr != null) sdr.Close();
                 sqlConnection.Close();
             }
-            //loginLabel.Text += $"{Login}.";
+            loginLabel.Text += $"{Login}.";
         }
 
         private async void AddCloth_Click(object sender, EventArgs e)
@@ -182,7 +182,7 @@ namespace EngineeringDesign
         {
             clothesList.Items.Clear();
             furnituresList.Items.Clear();
-            //loginLabel.Text = "Вы зашли под логином ";
+            loginLabel.Text = "Вы зашли под логином ";
             StorekeeperForm_Load(this, e);
         }
 

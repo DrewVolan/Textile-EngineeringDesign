@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 120);
+            this.label1.Location = new System.Drawing.Point(912, 431);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(240, 117);
+            this.textBox1.Location = new System.Drawing.Point(992, 428);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 20);
             this.textBox1.TabIndex = 1;
@@ -59,7 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(160, 240);
+            this.label2.Location = new System.Drawing.Point(912, 551);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 2;
@@ -68,7 +68,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(240, 237);
+            this.textBox2.Location = new System.Drawing.Point(992, 548);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '●';
             this.textBox2.Size = new System.Drawing.Size(200, 20);
@@ -78,7 +78,7 @@
             // 
             this.EnterButton.BackColor = System.Drawing.SystemColors.Control;
             this.EnterButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.EnterButton.Location = new System.Drawing.Point(365, 360);
+            this.EnterButton.Location = new System.Drawing.Point(1117, 671);
             this.EnterButton.Name = "EnterButton";
             this.EnterButton.Size = new System.Drawing.Size(83, 23);
             this.EnterButton.TabIndex = 4;
@@ -90,7 +90,7 @@
             // 
             this.RegistrationButton.BackColor = System.Drawing.SystemColors.Control;
             this.RegistrationButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.RegistrationButton.Location = new System.Drawing.Point(163, 360);
+            this.RegistrationButton.Location = new System.Drawing.Point(915, 671);
             this.RegistrationButton.Name = "RegistrationButton";
             this.RegistrationButton.Size = new System.Drawing.Size(83, 23);
             this.RegistrationButton.TabIndex = 5;
@@ -102,7 +102,7 @@
             // 
             this.warningLabel.AutoSize = true;
             this.warningLabel.ForeColor = System.Drawing.Color.Red;
-            this.warningLabel.Location = new System.Drawing.Point(237, 281);
+            this.warningLabel.Location = new System.Drawing.Point(989, 592);
             this.warningLabel.Name = "warningLabel";
             this.warningLabel.Size = new System.Drawing.Size(0, 13);
             this.warningLabel.TabIndex = 6;
@@ -111,7 +111,7 @@
             // 
             this.countAttempt.AutoSize = true;
             this.countAttempt.ForeColor = System.Drawing.Color.Red;
-            this.countAttempt.Location = new System.Drawing.Point(221, 50);
+            this.countAttempt.Location = new System.Drawing.Point(973, 361);
             this.countAttempt.Name = "countAttempt";
             this.countAttempt.Size = new System.Drawing.Size(35, 13);
             this.countAttempt.TabIndex = 7;
@@ -122,7 +122,7 @@
             // 
             this.infoLabel.AutoSize = true;
             this.infoLabel.ForeColor = System.Drawing.Color.Blue;
-            this.infoLabel.Location = new System.Drawing.Point(221, 37);
+            this.infoLabel.Location = new System.Drawing.Point(973, 348);
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(35, 13);
             this.infoLabel.TabIndex = 8;
@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 441);
+            this.ClientSize = new System.Drawing.Size(1293, 767);
             this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.countAttempt);
             this.Controls.Add(this.warningLabel);
@@ -145,7 +145,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AuthorizationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "";
+            this.Text = "Авторизация";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AuthorizationForm_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AuthorizationForm_KeyDown);
             this.ResumeLayout(false);

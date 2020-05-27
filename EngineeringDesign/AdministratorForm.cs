@@ -45,15 +45,16 @@ namespace EngineeringDesign
                         DialogResult newUserDialogResult = MessageBox.Show($"Создать нового пользователя {loginTextBox.Text}?", "Новый пользователь", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                         if (newUserDialogResult == DialogResult.Yes)
                         {
-                            SqlCommand insertStaff = new SqlCommand("INSERT INTO [Staff] (Surname, Name, Patronymic, Role, DateOfEmployment, Login, Password)VALUES(@Surname, @Name, @Patronymic, @Role, @DateOfEmployment, @Login, @Password)", sqlConnection);
-                            SqlCommand cmdSelect = new SqlCommand("SELECT * FROM [Staff]", sqlConnection);
-                            insertStaff.Parameters.AddWithValue("Surname", fullNameTextBox.Text.Split(' ')[0]);
-                            insertStaff.Parameters.AddWithValue("Name", fullNameTextBox.Text.Split(' ')[1]);
-                            insertStaff.Parameters.AddWithValue("Patronymic", fullNameTextBox.Text.Split(' ')[2]);
+                            //SqlCommand insertStaff = new SqlCommand("INSERT INTO [Users] (Surname, Name, Patronymic, Role, DateOfEmployment, Login, Password)VALUES(@Surname, @Name, @Patronymic, @Role, @DateOfEmployment, @Login, @Password)", sqlConnection);
+                            SqlCommand insertStaff = new SqlCommand("INSERT INTO [Users] (Role, Login, Pass, Id)VALUES(@Role, @Login, @Pass, 11)", sqlConnection);
+                            SqlCommand cmdSelect = new SqlCommand("SELECT * FROM [Users]", sqlConnection);
+                            //insertStaff.Parameters.AddWithValue("Surname", fullNameTextBox.Text.Split(' ')[0]);
+                            //insertStaff.Parameters.AddWithValue("Name", fullNameTextBox.Text.Split(' ')[1]);
+                            //insertStaff.Parameters.AddWithValue("Patronymic", fullNameTextBox.Text.Split(' ')[2]);
                             insertStaff.Parameters.AddWithValue("Role", paramTextBox1.Text);
-                            insertStaff.Parameters.AddWithValue("DateOfEmployment", dateTimePicker.Value);
+                            //insertStaff.Parameters.AddWithValue("DateOfEmployment", dateTimePicker.Value);
                             insertStaff.Parameters.AddWithValue("Login", loginTextBox.Text);
-                            insertStaff.Parameters.AddWithValue("Password", passwordTextBox.Text);
+                            insertStaff.Parameters.AddWithValue("Pass", passwordTextBox.Text);
                             await sqlConnection.OpenAsync();
                             sdr = await cmdSelect.ExecuteReaderAsync();
                             while (await sdr.ReadAsync())
@@ -95,7 +96,7 @@ namespace EngineeringDesign
             if (userTypeTabControl.SelectedIndex == 0 && usersListBox.SelectedIndex != -1)
             {
                 sqlConnection = new SqlConnection(connectionPathMain);
-                SqlCommand deleteStaff = new SqlCommand("UPDATE [Staff] SET [Status]=0 WHERE [Id]=@Id", sqlConnection);
+                SqlCommand deleteStaff = new SqlCommand("UPDATE [Users] SET [Status]=0 WHERE [Id]=@Id", sqlConnection);
                 string userForDelete = loginTextBox.Text;
                 DialogResult dialogResult = MessageBox.Show($"Вы действительно хотите удалить пользователя {userForDelete}?", "Удаление пользователя", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 switch (dialogResult)
@@ -141,7 +142,7 @@ namespace EngineeringDesign
             fullNameTextBox.Visible = false;
             dateLabel.Visible = false;
             dateTimePicker.Visible = false;
-            loginLabel.Visible = false;
+            loginLabel1.Visible = false;
             loginTextBox.Visible = false;
             passwordLabel.Visible = false;
             passwordTextBox.Visible = false;
@@ -155,6 +156,7 @@ namespace EngineeringDesign
             passwordTextBox.Text = "";
             paramTextBox1.Text = "";
             paramTextBox2.Text = "";
+            loginLabel.Text = "Вы вошли под логином ";
             AdministrationForm_Load(this, e);
         }
 
@@ -162,7 +164,7 @@ namespace EngineeringDesign
         {
             sqlConnection = new SqlConnection(connectionPathMain);
             await sqlConnection.OpenAsync();
-            SqlCommand selectStaff = new SqlCommand("SELECT * FROM [Staff]", sqlConnection);
+            SqlCommand selectStaff = new SqlCommand("SELECT * FROM [Users]", sqlConnection);
             try
             {
                 sdr = await selectStaff.ExecuteReaderAsync();
@@ -194,6 +196,7 @@ namespace EngineeringDesign
                 idTextBox.Enabled = false;
             }
             sqlConnection.Close();
+            loginLabel.Text += $"{Login}.";
         }
 
         private void TypePostComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -208,8 +211,8 @@ namespace EngineeringDesign
                 dateLabel.Text = "Дата найма:";
                 dateTimePicker.Visible = true;
                 dateTimePicker.Enabled = true;
-                loginLabel.Text = "Логин:";
-                loginLabel.Visible = true;
+                loginLabel1.Text = "Логин:";
+                loginLabel1.Visible = true;
                 loginTextBox.Visible = true;
                 loginTextBox.ReadOnly = false;
                 passwordLabel.Text = "Пароль:";
@@ -232,7 +235,7 @@ namespace EngineeringDesign
                 fullNameTextBox.Visible = false;
                 dateLabel.Visible = false;
                 dateTimePicker.Visible = false;
-                loginLabel.Visible = false;
+                loginLabel1.Visible = false;
                 loginTextBox.Visible = false;
                 passwordLabel.Visible = false;
                 passwordTextBox.Visible = false;
@@ -246,7 +249,7 @@ namespace EngineeringDesign
         private async void UsersListBox_MouseClick(object sender, MouseEventArgs e)
         {
             sqlConnection = new SqlConnection(connectionPathMain);
-            SqlCommand selectStaff = new SqlCommand("SELECT * FROM [Staff] WHERE [Login]=@Login", sqlConnection);
+            SqlCommand selectStaff = new SqlCommand("SELECT * FROM [Users] WHERE [Login]=@Login", sqlConnection);
             try
             {
                 if (usersListBox.SelectedIndex != -1)
@@ -261,16 +264,16 @@ namespace EngineeringDesign
                         fullNameTextBox.ReadOnly = true;
                         thisUser[0] = Convert.ToString(sdr["Id"]);
                         idTextBox.Text = thisUser[0];
-                        thisUser[1] = Convert.ToString(sdr["Surname"]) + " " + Convert.ToString(sdr["Name"]) + " " + Convert.ToString(sdr["Patronymic"]);
-                        fullNameTextBox.Text = thisUser[1];
+                        //thisUser[1] = Convert.ToString(sdr["Surname"]) + " " + Convert.ToString(sdr["Name"]) + " " + Convert.ToString(sdr["Patronymic"]);
+                        //fullNameTextBox.Text = thisUser[1];
                         dateLabel.Visible = true;
                         dateLabel.Text = "Дата найма:";
                         dateTimePicker.Visible = true;
                         dateTimePicker.Enabled = false;
-                        thisUser[3] = Convert.ToString(sdr["DateOfEmployment"]);
-                        dateTimePicker.Value = DateTime.Parse(thisUser[3]);
-                        loginLabel.Text = "Логин:";
-                        loginLabel.Visible = true;
+                        //thisUser[3] = Convert.ToString(sdr["DateOfEmployment"]);
+                        //dateTimePicker.Value = DateTime.Parse(thisUser[3]);
+                        loginLabel1.Text = "Логин:";
+                        loginLabel1.Visible = true;
                         loginTextBox.Visible = true;
                         loginTextBox.ReadOnly = true;
                         thisUser[5] = Convert.ToString(sdr["Login"]);
@@ -279,7 +282,7 @@ namespace EngineeringDesign
                         passwordLabel.Visible = true;
                         passwordTextBox.Visible = true;
                         passwordTextBox.ReadOnly = true;
-                        thisUser[6] = Convert.ToString(sdr["Password"]);
+                        thisUser[6] = Convert.ToString(sdr["Pass"]);
                         passwordTextBox.Text = thisUser[6];
                         paramLabel1.Text = "Должность:";
                         paramLabel1.Visible = true;
@@ -291,8 +294,8 @@ namespace EngineeringDesign
                         paramLabel2.Visible = true;
                         paramTextBox2.Visible = true;
                         paramTextBox2.ReadOnly = false;
-                        thisUser[4] = Convert.ToString(sdr["DateOfTermination"]);
-                        paramTextBox2.Text = thisUser[4];
+                        //thisUser[4] = Convert.ToString(sdr["DateOfTermination"]);
+                        //paramTextBox2.Text = thisUser[4];
                     }
                     sdr.Close();
                     sqlConnection.Close();
@@ -320,8 +323,8 @@ namespace EngineeringDesign
                     dateTimePicker.Visible = true;
                     dateTimePicker.Enabled = false;
                     dateTimePicker.Value = DateTime.Parse(thisUser[3]);
-                    loginLabel.Text = "Логин:";
-                    loginLabel.Visible = true;
+                    loginLabel1.Text = "Логин:";
+                    loginLabel1.Visible = true;
                     loginTextBox.Visible = true;
                     loginTextBox.ReadOnly = true;
                     loginTextBox.Text = thisUser[5];
@@ -342,6 +345,13 @@ namespace EngineeringDesign
                     paramTextBox2.Text = thisUser[4];
                 }
             }
+        }
+
+        private void ВыйтиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AuthorizationForm authorizationForm = new AuthorizationForm();
+            authorizationForm.Show();
+            this.Hide();
         }
     }
 }

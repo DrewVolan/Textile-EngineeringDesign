@@ -69,7 +69,6 @@
             this.deleteMyGoodButton = new System.Windows.Forms.Button();
             this.myGoodPictureBox = new System.Windows.Forms.PictureBox();
             this.myGoodsListBox = new System.Windows.Forms.ListBox();
-            this.loginLabel = new System.Windows.Forms.Label();
             this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,7 +78,7 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label11 = new System.Windows.Forms.Label();
+            this.loginLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -98,10 +97,10 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(13, 27);
+            this.tabControl1.Location = new System.Drawing.Point(382, 208);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(881, 461);
+            this.tabControl1.Size = new System.Drawing.Size(894, 473);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -119,7 +118,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(873, 435);
+            this.tabPage1.Size = new System.Drawing.Size(886, 447);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Список товаров";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -222,7 +221,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(873, 435);
+            this.tabPage2.Size = new System.Drawing.Size(886, 447);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Мои заказы";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -271,7 +270,7 @@
             this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(873, 435);
+            this.tabPage3.Size = new System.Drawing.Size(886, 447);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Конструктор изделий";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -478,7 +477,7 @@
             this.tabPage4.Controls.Add(this.myGoodsListBox);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(873, 435);
+            this.tabPage4.Size = new System.Drawing.Size(886, 447);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Мои изделия";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -510,15 +509,6 @@
             this.myGoodsListBox.Size = new System.Drawing.Size(867, 225);
             this.myGoodsListBox.TabIndex = 0;
             this.myGoodsListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MyGoodsListBox_MouseClick);
-            // 
-            // loginLabel
-            // 
-            this.loginLabel.AutoSize = true;
-            this.loginLabel.Location = new System.Drawing.Point(650, 24);
-            this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(127, 13);
-            this.loginLabel.TabIndex = 1;
-            this.loginLabel.Text = "Вы зашли под логином ";
             // 
             // инструментыToolStripMenuItem
             // 
@@ -558,7 +548,7 @@
             this.toolStripMenuItem3});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(906, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(1288, 24);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -589,25 +579,25 @@
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(109, 22);
             this.toolStripMenuItem4.Text = "Выйти";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.ToolStripMenuItem4_Click);
             // 
-            // label11
+            // loginLabel
             // 
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(304, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(586, 22);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Вы вошли под логином ";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.loginLabel.BackColor = System.Drawing.Color.White;
+            this.loginLabel.Location = new System.Drawing.Point(304, 0);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(586, 22);
+            this.loginLabel.TabIndex = 4;
+            this.loginLabel.Text = "Вы вошли под логином ";
+            this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 500);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.menuStrip2);
+            this.ClientSize = new System.Drawing.Size(1288, 693);
             this.Controls.Add(this.loginLabel);
+            this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.tabControl1);
             this.Name = "CustomerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -645,7 +635,6 @@
         private System.Windows.Forms.TextBox qtyBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox orderList;
-        private System.Windows.Forms.Label loginLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button updateOrder;
         private System.Windows.Forms.TextBox orderNum;
@@ -685,6 +674,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label loginLabel;
     }
 }

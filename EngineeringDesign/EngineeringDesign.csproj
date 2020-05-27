@@ -132,7 +132,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StorekeeperForm.resx">
       <DependentUpon>StorekeeperForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +155,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Equipment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\FireExtinguisher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\FirstAid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\update.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\write.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

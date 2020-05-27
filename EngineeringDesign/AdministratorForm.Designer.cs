@@ -53,13 +53,13 @@
             this.fullNameLabel = new System.Windows.Forms.Label();
             this.typePostComboBox = new System.Windows.Forms.ComboBox();
             this.typePostLabel = new System.Windows.Forms.Label();
-            this.loginLabel = new System.Windows.Forms.Label();
+            this.loginLabel1 = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.loginLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.userTypeTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -96,7 +96,7 @@
             this.panel1.Controls.Add(this.idLabel);
             this.panel1.Controls.Add(this.userTypeTabControl);
             this.panel1.Controls.Add(this.deleteUserButton);
-            this.panel1.Location = new System.Drawing.Point(12, 84);
+            this.panel1.Location = new System.Drawing.Point(484, 331);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(469, 354);
             this.panel1.TabIndex = 8;
@@ -157,13 +157,14 @@
             this.updateButton});
             this.medicToolStrip.Location = new System.Drawing.Point(0, 24);
             this.medicToolStrip.Name = "medicToolStrip";
-            this.medicToolStrip.Size = new System.Drawing.Size(800, 25);
+            this.medicToolStrip.Size = new System.Drawing.Size(1276, 25);
             this.medicToolStrip.TabIndex = 3;
             this.medicToolStrip.Text = "toolStrip1";
             // 
             // writeButton
             // 
             this.writeButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.writeButton.Image = global::EngineeringDesign.Properties.Resources.write;
             this.writeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.writeButton.Name = "writeButton";
             this.writeButton.Size = new System.Drawing.Size(23, 22);
@@ -173,6 +174,7 @@
             // updateButton
             // 
             this.updateButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.updateButton.Image = global::EngineeringDesign.Properties.Resources.update;
             this.updateButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(23, 22);
@@ -196,7 +198,7 @@
             this.panel2.Controls.Add(this.typePostComboBox);
             this.panel2.Controls.Add(this.typePostLabel);
             this.panel2.Controls.Add(this.newEmployeeButton);
-            this.panel2.Location = new System.Drawing.Point(487, 84);
+            this.panel2.Location = new System.Drawing.Point(959, 331);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(301, 354);
             this.panel2.TabIndex = 11;
@@ -306,8 +308,7 @@
             this.typePostComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.typePostComboBox.FormattingEnabled = true;
             this.typePostComboBox.Items.AddRange(new object[] {
-            "Пользователь",
-            "Студент"});
+            "Пользователь"});
             this.typePostComboBox.Location = new System.Drawing.Point(98, 13);
             this.typePostComboBox.Name = "typePostComboBox";
             this.typePostComboBox.Size = new System.Drawing.Size(200, 21);
@@ -323,15 +324,15 @@
             this.typePostLabel.TabIndex = 9;
             this.typePostLabel.Text = "Тип записи:";
             // 
-            // loginLabel
+            // loginLabel1
             // 
-            this.loginLabel.AutoSize = true;
-            this.loginLabel.Location = new System.Drawing.Point(3, 112);
-            this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(41, 13);
-            this.loginLabel.TabIndex = 12;
-            this.loginLabel.Text = "Логин:";
-            this.loginLabel.Visible = false;
+            this.loginLabel1.AutoSize = true;
+            this.loginLabel1.Location = new System.Drawing.Point(3, 112);
+            this.loginLabel1.Name = "loginLabel1";
+            this.loginLabel1.Size = new System.Drawing.Size(41, 13);
+            this.loginLabel1.TabIndex = 12;
+            this.loginLabel1.Text = "Логин:";
+            this.loginLabel1.Visible = false;
             // 
             // menuStrip2
             // 
@@ -341,7 +342,7 @@
             this.аккаунтToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(1276, 24);
             this.menuStrip2.TabIndex = 12;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -372,27 +373,28 @@
             this.выйтиToolStripMenuItem.Name = "выйтиToolStripMenuItem";
             this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.выйтиToolStripMenuItem.Text = "Выйти";
+            this.выйтиToolStripMenuItem.Click += new System.EventHandler(this.ВыйтиToolStripMenuItem_Click);
             // 
-            // label1
+            // loginLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(159, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(586, 22);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Вы вошли под логином ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.loginLabel.BackColor = System.Drawing.Color.White;
+            this.loginLabel.Location = new System.Drawing.Point(214, 2);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(586, 22);
+            this.loginLabel.TabIndex = 13;
+            this.loginLabel.Text = "Вы вошли под логином ";
+            this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // AdministratorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1276, 697);
             this.Controls.Add(this.medicToolStrip);
+            this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "AdministratorForm";
             this.Text = "Медпункт (Администрирование)";
             this.Load += new System.EventHandler(this.AdministrationForm_Load);
@@ -429,7 +431,7 @@
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox loginTextBox;
-        private System.Windows.Forms.Label loginLabel;
+        private System.Windows.Forms.Label loginLabel1;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.TextBox paramTextBox2;
@@ -444,6 +446,6 @@
         private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem аккаунтToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выйтиToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label loginLabel;
     }
 }

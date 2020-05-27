@@ -59,7 +59,7 @@
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label6 = new System.Windows.Forms.Label();
+            this.loginLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,7 +78,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(12, 27);
+            this.tabControl1.Location = new System.Drawing.Point(425, 245);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(776, 411);
@@ -127,9 +127,9 @@
             this.workshopComboBox.FormattingEnabled = true;
             this.workshopComboBox.Items.AddRange(new object[] {
             "Заготовительный цех",
-            "Пекарный цех",
+            "Текстильный цех",
             "Упаковочный цех",
-            "Цех монтажа тортов",
+            "Швейный цех",
             "Цех оформления"});
             this.workshopComboBox.Location = new System.Drawing.Point(41, 321);
             this.workshopComboBox.Name = "workshopComboBox";
@@ -161,6 +161,7 @@
             // 
             // fireExtinguisherPictureBox
             // 
+            this.fireExtinguisherPictureBox.Image = global::EngineeringDesign.Properties.Resources.FireExtinguisher;
             this.fireExtinguisherPictureBox.Location = new System.Drawing.Point(703, 115);
             this.fireExtinguisherPictureBox.Name = "fireExtinguisherPictureBox";
             this.fireExtinguisherPictureBox.Size = new System.Drawing.Size(50, 50);
@@ -171,6 +172,7 @@
             // 
             // firstAidPictureBox
             // 
+            this.firstAidPictureBox.Image = global::EngineeringDesign.Properties.Resources.FirstAid;
             this.firstAidPictureBox.Location = new System.Drawing.Point(703, 59);
             this.firstAidPictureBox.Name = "firstAidPictureBox";
             this.firstAidPictureBox.Size = new System.Drawing.Size(50, 50);
@@ -181,6 +183,7 @@
             // 
             // exitPictureBox
             // 
+            this.exitPictureBox.Image = global::EngineeringDesign.Properties.Resources.Exit;
             this.exitPictureBox.Location = new System.Drawing.Point(703, 171);
             this.exitPictureBox.Name = "exitPictureBox";
             this.exitPictureBox.Size = new System.Drawing.Size(50, 50);
@@ -191,6 +194,7 @@
             // 
             // equipmentPictureBox
             // 
+            this.equipmentPictureBox.Image = global::EngineeringDesign.Properties.Resources.Equipment;
             this.equipmentPictureBox.Location = new System.Drawing.Point(703, 3);
             this.equipmentPictureBox.Name = "equipmentPictureBox";
             this.equipmentPictureBox.Size = new System.Drawing.Size(50, 50);
@@ -375,7 +379,7 @@
             this.аккаунтToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(1292, 24);
             this.menuStrip2.TabIndex = 4;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -392,6 +396,7 @@
             this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
             this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.обновитьToolStripMenuItem.Text = "Обновить";
+            this.обновитьToolStripMenuItem.Click += new System.EventHandler(this.ОбновитьToolStripMenuItem_Click);
             // 
             // аккаунтToolStripMenuItem
             // 
@@ -406,23 +411,24 @@
             this.выйтиToolStripMenuItem.Name = "выйтиToolStripMenuItem";
             this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.выйтиToolStripMenuItem.Text = "Выйти";
+            this.выйтиToolStripMenuItem.Click += new System.EventHandler(this.ВыйтиToolStripMenuItem_Click);
             // 
-            // label6
+            // loginLabel
             // 
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(202, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(586, 22);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Вы вошли под логином ";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.loginLabel.BackColor = System.Drawing.Color.White;
+            this.loginLabel.Location = new System.Drawing.Point(202, 2);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(586, 22);
+            this.loginLabel.TabIndex = 5;
+            this.loginLabel.Text = "Вы вошли под логином ";
+            this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // DirectorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(1292, 703);
+            this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -481,6 +487,6 @@
         private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem аккаунтToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выйтиToolStripMenuItem;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label loginLabel;
     }
 }

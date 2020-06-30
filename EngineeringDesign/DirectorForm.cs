@@ -48,7 +48,6 @@ namespace EngineeringDesign
             try
             {
                 conn.Open();
-                MessageBox.Show("БД работает");
                 isConnected = true;
             }
             catch (Exception ex)
@@ -60,7 +59,7 @@ namespace EngineeringDesign
             {
                 try
                 {
-                    string userSelect = $"SELECT * FROM `Users`";
+                    string userSelect = $"SELECT * FROM `Workshops`";
                     DataSet DS = new DataSet();
 
 

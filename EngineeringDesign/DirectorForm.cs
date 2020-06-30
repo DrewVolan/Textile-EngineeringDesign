@@ -1,4 +1,5 @@
 ﻿using GanttChart;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,45 @@ namespace EngineeringDesign
             this.CenterToScreen();
             this.WindowState = FormWindowState.Maximized;
         }
+        MySqlConnection conn = DB.GetDBConnection();
+        bool isConnected = false;
+        private void GetWorkshops()
+        {
+            try
+            {
+                conn.Open();
+                MessageBox.Show("БД работает");
+                isConnected = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
+            if (isConnected == true)
+            {
+                try
+                {
+                    string userSelect = $"SELECT * FROM `Users`";
+                    DataSet DS = new DataSet();
+
+
+                    MySqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = userSelect;
+
+                    MySqlDataAdapter sdaUsers = new MySqlDataAdapter(cmd);
+                    sdaUsers.Fill(DS);
+
+                    dataGridView.DataSource = DS.Tables[0];
+
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         private async void SaveButton_Click(object sender, EventArgs e)
         {
             //sqlConnection = new SqlConnection(connectionPathOptional);
@@ -126,24 +165,32 @@ namespace EngineeringDesign
 
         private async void WorkshopComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            List<byte[]> iScreen = new List<byte[]>();
-            sqlConnection = new SqlConnection(connectionPathOptional);
-            SqlCommand cmdSelect = new SqlCommand("SELECT [Plan] FROM [Workshops] WHERE [Name]=@Name", sqlConnection);
-            cmdSelect.Parameters.AddWithValue("Name", workshopComboBox.Text);
-            await sqlConnection.OpenAsync();
-            sdr = await cmdSelect.ExecuteReaderAsync();
-            byte[] iTrimByte = null;
-            while (await sdr.ReadAsync())
+            try
             {
-                iTrimByte = (byte[])sdr["Plan"];
-                iScreen.Add(iTrimByte);
+                List<byte[]> iScreen = new List<byte[]>();
+                sqlConnection = new SqlConnection(connectionPathOptional);
+                SqlCommand cmdSelect = new SqlCommand("SELECT [Plan] FROM [Workshops] WHERE [Name]=@Name", sqlConnection);
+                cmdSelect.Parameters.AddWithValue("Name", workshopComboBox.Text);
+                await sqlConnection.OpenAsync();
+                sdr = await cmdSelect.ExecuteReaderAsync();
+                byte[] iTrimByte = null;
+                while (await sdr.ReadAsync())
+                {
+                    iTrimByte = (byte[])sdr["Plan"];
+                    iScreen.Add(iTrimByte);
+                }
+                byte[] imageData = iScreen[0];
+                MemoryStream ms = new MemoryStream(imageData);
+                Image newImage = Image.FromStream(ms);
+                workshopPictureBox.Image = newImage;
+                sdr.Close();
+                sqlConnection.Close();
             }
-            byte[] imageData = iScreen[0];
-            MemoryStream ms = new MemoryStream(imageData);
-            Image newImage = Image.FromStream(ms);
-            workshopPictureBox.Image = newImage;
-            sdr.Close();
-            sqlConnection.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            GetWorkshops();
         }
 
         private async void DirectorForm_Load(object sender, EventArgs e)

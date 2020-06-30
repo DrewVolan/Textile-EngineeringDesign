@@ -41,6 +41,8 @@
             this.equipmentPictureBox = new System.Windows.Forms.PictureBox();
             this.workshopPictureBox = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxNameDiagram = new System.Windows.Forms.TextBox();
             this.firstTaskHourСomboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.qtyDaysSumTextBox = new System.Windows.Forms.TextBox();
@@ -54,15 +56,14 @@
             this.toGanttChartButton = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginLabel = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBoxNameDiagram = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,6 +75,7 @@
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -153,6 +155,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(26)))), ((int)(((byte)(42)))));
+            this.panel1.Controls.Add(this.dataGridView);
             this.panel1.Controls.Add(this.fireExtinguisherPictureBox);
             this.panel1.Controls.Add(this.firstAidPictureBox);
             this.panel1.Controls.Add(this.exitPictureBox);
@@ -238,6 +241,22 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Настройка диаграммы Гантта";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(508, 236);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(148, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Наименование диаграммы:";
+            // 
+            // textBoxNameDiagram
+            // 
+            this.textBoxNameDiagram.Location = new System.Drawing.Point(662, 233);
+            this.textBoxNameDiagram.Name = "textBoxNameDiagram";
+            this.textBoxNameDiagram.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNameDiagram.TabIndex = 12;
             // 
             // firstTaskHourСomboBox
             // 
@@ -377,6 +396,15 @@
             this.panel2.Size = new System.Drawing.Size(756, 376);
             this.panel2.TabIndex = 0;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(768, 385);
+            this.tabPage2.TabIndex = 6;
+            this.tabPage2.Text = "Сохранённые диаграммы";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // menuStrip2
             // 
             this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(221)))), ((int)(((byte)(215)))));
@@ -429,30 +457,13 @@
             this.loginLabel.Text = "Вы вошли под логином ";
             this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // tabPage2
+            // dataGridView
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(768, 385);
-            this.tabPage2.TabIndex = 6;
-            this.tabPage2.Text = "Сохранённые диаграммы";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // textBoxNameDiagram
-            // 
-            this.textBoxNameDiagram.Location = new System.Drawing.Point(662, 233);
-            this.textBoxNameDiagram.Name = "textBoxNameDiagram";
-            this.textBoxNameDiagram.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNameDiagram.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(508, 236);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Наименование диаграммы:";
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(13, 14);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(674, 278);
+            this.dataGridView.TabIndex = 5;
             // 
             // DirectorForm
             // 
@@ -480,6 +491,7 @@
             this.tabPage6.ResumeLayout(false);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -522,5 +534,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxNameDiagram;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

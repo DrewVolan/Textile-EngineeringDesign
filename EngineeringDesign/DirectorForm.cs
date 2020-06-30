@@ -43,7 +43,7 @@ namespace EngineeringDesign
 
         private async void SaveButton_Click(object sender, EventArgs e)
         {
-            sqlConnection = new SqlConnection(connectionPathOptional);
+            //sqlConnection = new SqlConnection(connectionPathOptional);
             SqlCommand cmdUpdate = new SqlCommand("UPDATE [Workshops] SET [Plan]=@Plan WHERE [Name]=@Name", sqlConnection);
             workshopPictureBox.BringToFront();
             Bitmap bmp = new Bitmap(workshopPictureBox.Width, workshopPictureBox.Height);

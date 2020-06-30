@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -352,6 +353,49 @@ namespace EngineeringDesign
             AuthorizationForm authorizationForm = new AuthorizationForm();
             authorizationForm.Show();
             this.Hide();
+        }
+        // UPDATE `Users` SET `PcName` = NULL, `PcUserName` = NULL, `Os` = NULL, `CpuBitRate` = NULL, `CpuModel` = NULL, `CpuCoreCount` = NULL, `DateRecordHardwareInfo` = NULL WHERE `Users`.`Id` = 1
+
+
+        MySqlConnection conn = DB.GetDBConnection();
+        bool isConnected = false;
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                MessageBox.Show("БД работает");
+                isConnected = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (isConnected == true)
+            {
+                try
+                {
+                    string userSelect = $"SELECT * FROM `Users`";
+                    DataSet DS = new DataSet();
+
+
+                    MySqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = userSelect;
+
+                    MySqlDataAdapter sdaUsers = new MySqlDataAdapter(cmd);
+                    sdaUsers.Fill(DS);
+
+                    dataGridView.DataSource = DS.Tables[0];
+
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

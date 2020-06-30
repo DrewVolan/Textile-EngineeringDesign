@@ -5,8 +5,8 @@
         public enum TimeInterval
         {
             Hour,
-            //Day, //Todo: add support for day
-            //Month //Todo: add support for month
+            //Day,
+            //Month
         }
 
         public enum Corner

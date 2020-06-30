@@ -60,6 +60,9 @@
             this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginLabel = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBoxNameDiagram = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,6 +81,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(425, 245);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -214,6 +218,8 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label6);
+            this.tabPage5.Controls.Add(this.textBoxNameDiagram);
             this.tabPage5.Controls.Add(this.firstTaskHourСomboBox);
             this.tabPage5.Controls.Add(this.label5);
             this.tabPage5.Controls.Add(this.qtyDaysSumTextBox);
@@ -270,7 +276,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(444, 262);
+            this.label5.Location = new System.Drawing.Point(461, 262);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(195, 13);
             this.label5.TabIndex = 10;
@@ -423,6 +429,31 @@
             this.loginLabel.Text = "Вы вошли под логином ";
             this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(768, 385);
+            this.tabPage2.TabIndex = 6;
+            this.tabPage2.Text = "Сохранённые диаграммы";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // textBoxNameDiagram
+            // 
+            this.textBoxNameDiagram.Location = new System.Drawing.Point(662, 233);
+            this.textBoxNameDiagram.Name = "textBoxNameDiagram";
+            this.textBoxNameDiagram.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNameDiagram.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(508, 236);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(148, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Наименование диаграммы:";
+            // 
             // DirectorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,5 +519,8 @@
         private System.Windows.Forms.ToolStripMenuItem аккаунтToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выйтиToolStripMenuItem;
         private System.Windows.Forms.Label loginLabel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxNameDiagram;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
